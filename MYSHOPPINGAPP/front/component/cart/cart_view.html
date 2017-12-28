@@ -1,0 +1,32 @@
+  <div class="shoppingcart">
+    <!-- Title -->
+    <div class="title">
+      Shopping Cart
+    </div>
+    <!--line-->
+    <div class="line" ng-repeat = "itemCart in cart" ng-init = "setTotalPrice(itemCart)">
+      <!-- Image -->
+      <div class="image">
+      <!-- {{itemCart.itemImage}} -->
+      <img src="front/cart_images/item-1.png" alt="">
+
+      </div>
+      <!-- details -->
+      <div class="productName">{{itemCart.itemName}}</div>
+      <button class="delete" ng-click="removeItemCart(itemCart)" type="button" name="button">delete</button>
+      <div class="total_price">€{{itemCart.itemQty*itemCart.itemPrice}}</div>
+      <div class="quantity">
+        <button ng-click="increaseQty(itemCart)" type="button" name="button">+</button>
+        <span class="quantity-number">{{itemCart.itemQty}}</span>
+        <button ng-click="decreaseQty(itemCart)" type="button" name="button">-</button>
+      </div>
+      <div class="unit_price">€{{itemCart.itemPrice}}</div>
+
+    </div><!--line-->
+    <!--total shopping bag-->
+    <div>
+      <button class="confirm" ng-click="postcart()" type="button" name="button">Validate Order</button>
+    </div><!--shopping bag-->
+    <div class="total">TOTAL : €{{setTotalPrice()}}</div>
+    </div>
+    <!--cart validation-->

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+		<head>
+			<title>Shopping Application</title>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<!--external tools-->
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+			<link rel="stylesheet" href="//storage.googleapis.com/code.getmdl.io/1.0.1/material.teal-red.min.css" /><!--barre de menu-->
+			<link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons"><!--icons navbar-->
+			<link rel="stylesheet" href='//ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css' /><!--mise en forme log et account-->
+			<!--CSS Sheets -->
+			<link rel="stylesheet" href="style.css">
+			<link rel="stylesheet" href="front/component/account/account.css">
+			<link rel="stylesheet" href="front/component/cart/cart.css">
+			<link rel="stylesheet" href="front/component/home/home.css">
+			<link rel="stylesheet" href="front/component/log/log.css">
+		</head>
+
+		<body ng-app="shoppingApp">
+
+			<nav class="color">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo"><i class="material-icons"></i>Anas fais-toi plaizzz</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a ui-sref='createaccount'><i class="material-icons">person_add</i></a></li>
+            <li><a ui-sref='log'><i class="material-icons">person</i></a></li>
+            <li><a ui-sref='cart'><i class="material-icons">local_grocery_store</i></a></li>
+            <li><a href="#!"><i class="material-icons">more_vert</i></a></li>
+          </ul>
+        </div>
+      </nav>
+
+			<div>
+				<ui-view></ui-view>
+	 		</div>
+
+
+		<!--Dependencies / Modules -->
+
+		 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+		 	<script type="text/javascript" src="front/node_modules/angular/angular.js"></script>
+			<script type="text/javascript" src="front/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+			<script type="text/javascript" src="front/node_modules/angular-material/angular-material.min.js"></script>
+			<script src="//storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
+			<script type="text/javascript" src="front/node_modules/angular-animate/angular-animate.min.js"></script>
+			<script type="text/javascript" src="front/node_modules/angular-aria/angular-aria.min.js"></script>
+			<script type="text/javascript" src="front/node_modules/angular-messages/angular-messages.min.js"></script>
+
+			<!--app / components -->
+			<script type="text/javascript" src="front/app.js"></script>
+			<script type="text/javascript" src="front/config.js"></script>
+			<script type="text/javascript" src="front/component/account/account_controller.js"></script>
+			<script type="text/javascript" src="front/component/cart/cart_controller.js"></script>
+			<script type="text/javascript" src="front/component/home/home_controller.js"></script>
+			<script type="text/javascript" src="front/component/log/log_controller.js"></script>
+			<script type="text/javascript" src="front/component/home/home_component.js"></script>
+			<script type="text/javascript" src="front/component/account/account_component.js"></script>
+			<script type="text/javascript" src="front/component/cart/cart_component.js"></script>
+			<script type="text/javascript" src="front/component/log/log_component.js"></script>
+		</body>
+</html>
